@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { HYDRATE } from 'next-redux-wrapper';
+import { AppState } from '..'
 
-const initialState = []
+const initialState: never[] = []
 
 export const movieSlice = createSlice({
   name: 'movie',
@@ -19,7 +20,7 @@ export const movieSlice = createSlice({
 });
 
 export const { addMovie} = movieSlice.actions;
-export const selectMovie = (state) => state.movie
+export const selectMovie = (state: AppState) => state.movie
 
 
 export default movieSlice.reducer;
